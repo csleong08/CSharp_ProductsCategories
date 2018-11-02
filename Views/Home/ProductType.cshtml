@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Products</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <style>
+        .container{
+            width: 900px;
+            margin: 0 auto;
+        }
+        .left, .right{
+            width: 400px;
+            margin: 0 auto;
+            display: inline-block;
+            vertical-align: top;
+        }
+        form{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>@ViewBag.productDisplay.name</h1>
+        <div class="left">
+            <h3>Categories:</h3>
+            <div class="selectedCat">
+                @foreach (var prod in @ViewBag.productDisplay.CategoriesProduct)
+                {
+                    @prod.Categories.name  
+                    <form action="/DeleteCatProd" method="post">
+                        <input type="hidden" name="productID" value=@prod.productsid>
+                        <input type="hidden" name="categoryID" value=@prod.categoriesid>
+                        <input type="submit" value="Remove">
+                    </form>
+                    <hr>
+                }
+            </div>
+        </div>
+        <div class="right">
+            <p>
+                <form action="/AddCatProd" method="post">
+                <label>Add Category: </label>
+                <select name="categoryID">
+                    @foreach (var cat in @ViewBag.categoryDisplay)
+                    {
+                        bool CATE = false;
+                        @foreach(var cate in @ViewBag.productDisplay.CategoriesProduct)
+                        {
+                            @if(@cat.id == @cate.categoriesid)
+                            {
+                                CATE = true;
+                                
+                            }
+                        }
+                        @if (CATE ==false)
+                        {
+                            <option value="@cat.id">@cat.name</option>
+                        }
+                        
+                    }
+                    
+                </select>
+                    <input type="hidden" name="productID" value=@ViewBag.productDisplay.id>
+                    <input type="submit" value="Add">
+                </form>
+            </p>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+</body>
+</html>

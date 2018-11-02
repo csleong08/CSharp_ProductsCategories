@@ -1,0 +1,11 @@
+/Users/csleong/Desktop/Coding Dojo/csharp/ProductsCategories/bin/Debug/netcoreapp2.0/ProductsCategories.deps.json
+/Users/csleong/Desktop/Coding Dojo/csharp/ProductsCategories/bin/Debug/netcoreapp2.0/ProductsCategories.runtimeconfig.json
+/Users/csleong/Desktop/Coding Dojo/csharp/ProductsCategories/bin/Debug/netcoreapp2.0/ProductsCategories.runtimeconfig.dev.json
+/Users/csleong/Desktop/Coding Dojo/csharp/ProductsCategories/bin/Debug/netcoreapp2.0/ProductsCategories.dll
+/Users/csleong/Desktop/Coding Dojo/csharp/ProductsCategories/bin/Debug/netcoreapp2.0/ProductsCategories.pdb
+/Users/csleong/Desktop/Coding Dojo/csharp/ProductsCategories/obj/Debug/netcoreapp2.0/ProductsCategories.csprojResolveAssemblyReference.cache
+/Users/csleong/Desktop/Coding Dojo/csharp/ProductsCategories/obj/Debug/netcoreapp2.0/ProductsCategories.csproj.CoreCompileInputs.cache
+/Users/csleong/Desktop/Coding Dojo/csharp/ProductsCategories/obj/Debug/netcoreapp2.0/ProductsCategories.AssemblyInfoInputs.cache
+/Users/csleong/Desktop/Coding Dojo/csharp/ProductsCategories/obj/Debug/netcoreapp2.0/ProductsCategories.AssemblyInfo.cs
+/Users/csleong/Desktop/Coding Dojo/csharp/ProductsCategories/obj/Debug/netcoreapp2.0/ProductsCategories.dll
+/Users/csleong/Desktop/Coding Dojo/csharp/ProductsCategories/obj/Debug/netcoreapp2.0/ProductsCategories.pdb
